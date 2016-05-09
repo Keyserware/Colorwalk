@@ -22,6 +22,10 @@ sysinfo.txt
 /*.unityproj
 /*.booproj
  
+# ============== ignore standard assets ===========
+/Standard Assets
+/Editor
+
 # ============ #
 # OS generated #
 # ============ #
