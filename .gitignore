@@ -23,8 +23,8 @@ sysinfo.txt
 /*.booproj
  
 # ============== ignore standard assets ===========
-/Standard Assets
-/Editor
+/Colorwalk/Standard Assets
+/Colorwalk/Editor
 
 # ============ #
 # OS generated #
