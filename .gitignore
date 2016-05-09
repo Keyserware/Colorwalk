@@ -23,10 +23,16 @@ sysinfo.txt
 /*.booproj
  
 # ============== ignore standard assets ===========
+
+Colorwalk/
 Assets/Editor.meta
-Assets/Editor/
-Assets/Standard Assets.meta
+
+Colorwalk/Assets/Editor/
+
+Colorwalk/Assets/Standard Assets.meta
+Colorwalk/
 Assets/Standard Assets/
+
 
 
 # ============ #
