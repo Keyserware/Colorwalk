@@ -26,9 +26,19 @@ public static class Spliner {
 		for(int i = 0; i < B.Length; i++) {
 			B[i] = (1/(ti[i+2]-t[i])) * (r[i+1] * A[i] + s[i] * A[i+1]);
 		}
-			
+				
 		return (1/(ti[2]-t[1])) * (r[1] * B[0] + s[1] * B[1]);
 	}
 
-	public static Vector3 
+	public static Vector3 centripetalCatmullRom(float t, Vector3[] v) {
+		return catmullRom(t, 0.5f, v);
+	}
+
+	public static Vector3 chordalCatmullRom(float t, Vector3[] v) {
+		return catmullRom(t, 1.0f, v);
+	}
+
+	public static Vector3 standardCatmullRom(float t, Vector3[] v) {
+		return catmullRom(t, 0.0f, v);
+	}
 }
