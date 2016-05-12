@@ -24,16 +24,15 @@ sysinfo.txt
  
 # ============== ignore standard assets ===========
 
-Colorwalk/
-Assets/Editor.meta
+Editor.meta
 
-Colorwalk/Assets/Editor/
+Editor/
 
-Colorwalk/Assets/Standard Assets.meta
-Colorwalk/
+#Colorwalk/Assets/Standard Assets.meta
+#Colorwalk/
 Assets/Standard Assets/
 
-
+#some test change
 
 # ============ #
 # OS generated #
