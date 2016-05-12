@@ -27,10 +27,8 @@ sysinfo.txt
 Editor.meta
 
 Editor/
-
-#Colorwalk/Assets/Standard Assets.meta
-#Colorwalk/
-Assets/Standard Assets/
+Standard Assets.meta
+Standard Assets/
 
 #some test change
 
