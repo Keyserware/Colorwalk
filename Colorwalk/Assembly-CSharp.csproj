@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\RotateTest.cs" />
      <Compile Include="Assets\Scripts\Spliner.cs" />
      <Compile Include="Assets\Scripts\TubeFactory.cs" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
