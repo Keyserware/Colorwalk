@@ -19,20 +19,22 @@ public static class Spliner {
 			s[i-1] = t - ti[i-1];
 		}
 
-		A[0] = (1/(ti[1] - ti[0])) * (r[0] * v0 + s[0] * v1);
-		A[1] = (1/(ti[2] - ti[1])) * (r[1] * v1 + s[1] * v2);
-		A[2] = (1/(ti[3] - ti[2])) * (r[2] * v2 + s[2] * v3);
+		A[0] = (1.0f/(ti[1] - ti[0])) * (r[0] * v0 + s[0] * v1);
+		A[1] = (1.0f/(ti[2] - ti[1])) * (r[1] * v1 + s[1] * v2);
+		A[2] = (1.0f/(ti[3] - ti[2])) * (r[2] * v2 + s[2] * v3);
 
-		B[0] = (1/(ti[2]-ti[0])) * (r[1] * A[0] + s[0] * A[1]);
-		B[1] = (1/(ti[3]-ti[1])) * (r[2] * A[1] + s[1] * A[2]);
+		B[0] = (1.0f/(ti[2]-ti[0])) * (r[1] * A[0] + s[0] * A[1]);
+		B[1] = (1.0f/(ti[3]-ti[1])) * (r[2] * A[1] + s[1] * A[2]);
 				
-		return (1/(ti[2]-ti[1])) * (r[1] * B[0] + s[1] * B[1]);
+		return (1.0f/(ti[2]-ti[1])) * (r[1] * B[0] + s[1] * B[1]);
 	}
 
 	public static Vector3 catmullRomPath(float t, float alpha, Vector3[] prevPath, Vector3[] path) {
-		float segTLength = 1.0f / ((float)path.Length - 1.0f);
-		int segID = (int) (t / segTLength);
-		float s = t - segID * segTLength;
+		int segCount = path.Length - 1;
+		float segTLength = 1.0f / ((float)segCount);
+		int segID = Mathf.Min((int) (t / segTLength), segCount - 1);
+		float s = (t - segID * segTLength) / segTLength;
+		Debug.Log("t =" + t + ", segID = " + segID + ", s = " + s);
 		if(segID > 1) {
 			return catmullRom(s, alpha, path[segID - 2], path[segID - 1], path[segID], path[segID + 1]);
 		} else if(segID == 1) {

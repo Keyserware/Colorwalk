@@ -50,7 +50,7 @@ public class Tube  {
 			marker = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 			marker.transform.position = v0;
 			marker.transform.localScale = 0.2f * Vector3.one;
-			Vector3 v1 = Spliner.catmullRomPath((float) i / splinePrecision, 0.5f, currentPath, path);
+			Vector3 v1 = Spliner.catmullRomPath((float) i / splinePrecision, 0, currentPath, path);
 			arcLengths[i] = arcLengths[i-1] + Vector3.Distance(v0, v1);
 			Debug.Log(v0);
 			Debug.DrawLine(v0, v1, Color.green, 1000);

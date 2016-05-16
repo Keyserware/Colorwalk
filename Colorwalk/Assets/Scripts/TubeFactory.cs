@@ -46,7 +46,7 @@ public class TubeFactory : MonoBehaviour {
 //		}
 
 
-		testTube.appendRandPath(10, 5.0f, 1.0f, 50);
+		testTube.appendRandPath(5, 5.0f, 1.0f, 50);
 		testTube.debugPath(Color.blue);
 
 //		LinkedList<Vector3> spline = testTube.getSpline;
