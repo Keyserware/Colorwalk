@@ -47,7 +47,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\RotateTest.cs" />
      <Compile Include="Assets\Scripts\Spliner.cs" />
+     <Compile Include="Assets\Scripts\Tube.cs" />
      <Compile Include="Assets\Scripts\TubeFactory.cs" />
+     <Compile Include="Assets\Scripts\TubeRing.cs" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
